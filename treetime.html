@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>treetime</title>
+
+        <link rel= "icon" type="image/png" href="images/leaf.png">
+        
+        <style>
+            @font-face {
+                font-family: Daydream;
+                src: url('fonts/Daydream DEMO.otf');
+            }
+            h1 {
+                font-family: 'Daydream';
+                color: rgb(144, 171, 96);
+                text-align: center;
+            }       
+
+            @font-face {
+                font-family: Japan;
+                src: url('fonts/To Japan.otf');
+            }
+            h4 {
+                font-family: 'Japan';
+                color: rgb(144, 171, 96);
+                text-align: center;
+            }     
+
+
+            html, body {
+                height: 100%;
+                overflow: hidden;
+
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .fullscreen-img {
+                width: 100vw;
+                height: 100dvh;
+                object-fit: contain;
+                display: block;
+            }
+
+            #treetime-startscreen {
+                position:fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-color: beige;
+                z-index: 9999;
+                cursor: pointer;
+                transition: opacity 0.6s ease;
+            }
+
+            #main-treetime {
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body style = "background-color: beige;">
+        <div id="startscreen" onclick="revealWebsite()">
+        <img src="images/treetime_startscreen_trans.png" alt="tree time start screen" class="fullscreen-img">
+        </div>
+        
+        <div id="main-treetime">
+        <h1 style="font-family:'Daydream'">treetime</h1>
+        <h4 style="font-family:'Japan';">a tree to track how long you focus</h5>
+        </div>
+        
+        <script>
+            function revealWebsite() {
+                const overlay = document.getElementById('startscreen');
+                const website = document.getElementById('main-treetime');
+
+                website.style.display = 'block';
+                overlay.style.opacity = 0;
+
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                }, 600);
+            }
+        </script>
+    </body>
+</html>
