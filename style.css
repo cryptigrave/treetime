@@ -1,0 +1,78 @@
+@font-face {
+    font-family: Daydream;
+    src: url('fonts/Daydream DEMO.otf');
+    }
+
+    h1 {
+        font-family: 'Daydream';
+        color: rgb(144, 171, 96);
+        text-align: center;
+    }       
+
+    @font-face {
+        font-family: Japan;
+        src: url('fonts/To Japan.otf');
+    }
+
+    h4 {
+        font-family: 'Japan';
+        color: rgb(144, 171, 96);
+        text-align: center;
+    }     
+
+    h6 {
+        font-family: 'Japan';
+        color: rgb(144, 171, 96);
+        text-align: center;
+    }
+
+    html, body {
+        height: 100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .fullscreen-img {
+        width: 100vw;
+        height: 100dvh;
+        object-fit: contain;
+        display: block;
+    }
+
+    #treetime-startscreen {
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: beige;
+        z-index: 9999;
+        cursor: pointer;
+        transition: opacity 0.6s ease;
+    }
+
+    #main-treetime {
+        display: none;
+    }
+
+    .start-button {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+
+    }
+
+    .start-button img {
+        transition-duration: transform 0.2s ease-in-out;
+        width: 300;
+        height: 200;
+    }
+
+    .start-button:hover img {
+        width: 90%;
+        height: 90%;
+        transform: scale(0.9);
+    }
