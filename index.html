@@ -9,26 +9,18 @@
 
     </head>
     <body style = "background-color: beige;">
-        <div id="startscreen" onclick="revealWebsite()">
+        <div id="startscreen" onclick="revealWebsite()" onclick="Key">
         <img src="images/treetime_startscreen_trans.png" alt="tree time start screen" class="fullscreen-img">
         </div>
         
-        <div id="main-treetime" align="center">
+        <div id="main-treetime">
         <h1 style="font-family:'Daydream'">treetime</h1>
         <h4 style="font-family:'Japan';">a tree* to track how long you focus</h4>
         <h6 style="font-family:'Japan';">*disclaimer: treetime does not have good looking trees cause idk how to draw them yet, i'm working on it though...</h6>
-        <img src="images/clock.png" alt="a green little clock" style="width:155px; min-width: 155px; height: 155px;">
         </div>
 
         <br>
-
-        <div align="center">
-            <button style="background: none; border: none;" class="startbutton">
-                <img src="images/startbutton.png">
-                
-            </button>
-        </div>
-
+   
         <script>
             function revealWebsite() {
                 const overlay = document.getElementById('startscreen');
@@ -37,6 +29,8 @@
                 website.style.display = 'block';
                 overlay.style.opacity = 0;
 
+                startscreen.classList.add('fade-out');
+                
                 setTimeout(() => {
                     overlay.style.display = 'none';
                 }, 600);
